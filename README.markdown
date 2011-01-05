@@ -145,7 +145,7 @@ Sometimes you want to have ajaxyDialog behavior on links or forms that may not b
 
   * .ajaxyDialog("dialogContainer")
 
-    Return the <div> that has .dialog() applied to it for displaying content. Current always-modal behavior means this is always the same div, but that may change.  
+    Return the `<div>` that has .dialog() applied to it for displaying content. Current always-modal behavior means this is always the same div, but that may change.  
 
     Can be useful for calling methods on the dialog, binding events on the dialog, or custom loading content in it with .html(). 
 
