@@ -105,6 +105,8 @@ Sometimes you want to have ajaxyDialog behavior on links or forms that may not b
 
     First item in loaded content matching the selector will be REMOVED from dom, and it's text will be set as dialog    title. Set to 'false' to turn off this behavior altogether. 
 
+    If the extractTitleSelector is false or gets no matches, a title attribute set on the hyperlink or form in question will be used as dialog title. 
+
   * chainAjaxySelector
     
     default: "a:not([target]), form:not([target])"
