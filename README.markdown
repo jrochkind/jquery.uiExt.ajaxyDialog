@@ -4,7 +4,7 @@ A jQuery UI widget that can be applied to hyperlinks or forms, and causes the de
 
 Built with the jQuery UI widget factory. 
 
-This is new, there are probably some bugs, but it's working well for me. 
+This is new, there are probably some bugs, but it's working well for me. Some additional custom events are probably called for, but i haven't needed them yet for the use cases that motivated this widget.  Any code review, suggestions, patches, or pull requests are welcome. 
 
 ## Background and Summary
 
@@ -138,6 +138,10 @@ Sometimes you want to have ajaxyDialog behavior on links or forms that may not b
    You can't be sure if the host dialog was already open or not when the error occured loading more content, so best to close it if you want it closed on custom error:  `$(this).ajaxyDialog("close");`
 
 ## Methods
+
+  * .ajaxyDialog("destroy")
+     
+     should work as expected. 
 
   * .ajaxyDialog("open")
 
