@@ -10,7 +10,7 @@ The [JQuery UI dialog](http://jqueryui.com/demos/dialog/) is awesome. What I end
 
 This isn't 'ajax' exactly, it's more ajah (HTML rather than XML), so let's call it ajaxy. 
 
-This isn't too hard to do, but after doing it several times, and realizing the edge and exceptional cases to be taken care of, I decided to abstract the pattern into a widget of its own. One tricky thing the widget does is, after you've loaded a dialog, all hyperlinks or forms in the loaded content will be similarly ajaxyDialog-ified. 
+This isn't too hard to do, but after doing it several times, and realizing the edge and exceptional cases to be taken care of, I decided to abstract the pattern into a widget of its own. One tricky thing the widget does is, after you've loaded a dialog, all (or some) hyperlinks or forms in the loaded content can easily be similarly ajaxyDialog-ified. 
 
 ajaxyDialog widget will:
 
