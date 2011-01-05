@@ -29,6 +29,8 @@ ajaxyDialog widget will:
 
 TODO: Actual live example/demo
 
+Can mix and match hyperlinks and forms, no problem
+
     $("a.something, form.something_else").ajaxyDialog();
 
 jQuery UI dialogs default to 300 pixels wide and don't do auto-width, so you might want to set a width. 
@@ -37,7 +39,7 @@ jQuery UI dialogs default to 300 pixels wide and don't do auto-width, so you mig
        width: 500;
     });
 
-Any other JQuery UI Dialog, including callbacks on the dialog widget itself, can be passed in too, on creation or later as options:
+Any other JQuery UI Dialog, including callbacks on the dialog widget itself (wait, not entirely sure this will work properly actually), can be passed in too, on creation or later as options:
     
     # all these are actually Dialog options
     $("a.something").ajaxyDialog({
@@ -51,7 +53,7 @@ Any other JQuery UI Dialog, including callbacks on the dialog widget itself, can
      $("a#specific_one").ajaxyDialog("option", "buttons", {Ok: function() { $(this).dialog("close"); }});
 
 
-Access the dialog container, and it's dialog widget, to do things to it
+Access the dialog container, and it's dialog widget, to do things to it, like calling methods or binding events. 
 
     $("a.blue").ajaxyDialog("dialogContainer").dialog("open");
     $("a.blue").ajaxyDialog("dialogContainer").bind( "dialogbeforeclose", function(event, ui) {
@@ -59,6 +61,7 @@ Access the dialog container, and it's dialog widget, to do things to it
     });
 
 A couple other useful methods on the ajaxyDialog itself:
+
     # triggers a load of content in a dialog that will be opened, with options already setup
     $("a.red").ajaxyDialog("open");  
     # close the associated dialog if it's open....
