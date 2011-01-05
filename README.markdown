@@ -2,6 +2,8 @@
 
 A jQuery UI widget that can be applied to hyperlinks or forms, and causes the destination of the hyperlink or form to be loaded in a jQuery UI Dialog. 
 
+Built with the jQuery UI widget factory. 
+
 This is new, there are probably some bugs, but it's working well for me. 
 
 ## Background and Summary
