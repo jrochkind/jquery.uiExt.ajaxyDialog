@@ -52,8 +52,14 @@
                   $.ajax({
                       url: url,
                       dataType: "html",
-                      success: function(resp, status) {
-                        self._loadToDialog(resp);
+                      success: function(resp, status, xhr) {
+                        if (xhr.status != 0) {                          
+                          self._loadToDialog(resp);
+                        } else {
+                          //stupid jquery calling this 'success', it's
+                          //network unavailable.
+                          self._displayFailure(url, xhr, status); 
+                        }
                       },
                       error: function(xhr, msg) {
                         self._displayFailure(url, xhr, msg); 
@@ -74,8 +80,14 @@
                       data: serialized,
                       type: form.attr("method").toUpperCase(),
                       dataType: "html",
-                      success: function(resp, status) {
-                        self._loadToDialog(resp);
+                      success: function(resp, status, xhr) {
+                        if (xhr.status != 0) {
+                          self._loadToDialog(resp);
+                        } else {
+                          //stupid jquery calling this 'success', it's
+                          //network unavailable.
+                          self._displayFailure(url, xhr, status); 
+                        }
                       },
                       error: function(xhr, msg) {
                         self._displayFailure(actionUri, xhr, msg); 
